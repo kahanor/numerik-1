@@ -43,7 +43,9 @@ def lin_solve(A,b):
 
 
 def main():
-    pass
+    A = np.random.randint(-10, 10, (4, 4))
+    b = np.random.randint(-10, 10, (4, 1))
+    lin_solve(A, b)
 
 
 if __name__ == '__main__':
