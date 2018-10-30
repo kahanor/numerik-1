@@ -39,6 +39,4 @@ def PseudoInverse(A):
     return A_pseu
 
 def LinearSolve(A,b):
-    # Loese lineares Gleichungssystem, behandle es dazu als lineares
-    # Ausgleichsproblem ||A*x-b||2 -> min
-    pass
+    return np.matmul(PseudoInverse(A), b)
