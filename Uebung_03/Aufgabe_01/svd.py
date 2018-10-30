@@ -23,7 +23,7 @@ def gram_schmidt(X):
         B.append(temp_vec)
     return B
 
-def SVD(A):
+def svd(A):
     B = np.matmul(A.T, A)
     ew, ev = la.eig(B)
     V = gram_schmidt(ev)
@@ -33,10 +33,10 @@ def SVD(A):
     # U = ui = (1/sqrt(ewi)) * A * evi ergaenzt zu ON-Basis des Rm
     return U, Sigma, Vt
 
-def PseudoInverse(A):
+def pseudo_inverse(A):
     A_ = la.inv(np.matmul(A.T, A))
     A_pseu = np.matmul(A_, A.T)
     return A_pseu
 
-def LinearSolve(A,b):
-    return np.matmul(PseudoInverse(A), b)
+def lin_solve(A,b):
+    return np.matmul(pseudo_inverse(A), b)
