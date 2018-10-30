@@ -14,7 +14,9 @@ def SVD(A):
 
 def PseudoInverse(A):
     # Berechne A+ mit Hilfe der SVD
+    pass
 
 def LinearSolve(A,b):
     # Loese lineares Gleichungssystem, behandle es dazu als lineares
     # Ausgleichsproblem ||A*x-b||2 -> min
+    pass
