@@ -40,3 +40,11 @@ def pseudo_inverse(A):
 
 def lin_solve(A,b):
     return np.matmul(pseudo_inverse(A), b)
+
+
+def main():
+    pass
+
+
+if __name__ == '__main__':
+    main()
