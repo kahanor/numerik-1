@@ -34,8 +34,9 @@ def SVD(A):
     return U, Sigma, Vt
 
 def PseudoInverse(A):
-    # Berechne A+ mit Hilfe der SVD
-    pass
+    A_ = la.inv(np.matmul(A.T, A))
+    A_pseu = np.matmul(A_, A.T)
+    return A_pseu
 
 def LinearSolve(A,b):
     # Loese lineares Gleichungssystem, behandle es dazu als lineares
