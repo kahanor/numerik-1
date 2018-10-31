@@ -30,7 +30,7 @@ def svd(A):
     Vt = np.transpose(V)
     sv = np.sqrt(ew)
     Sigma = np.diag(sv)
-    # U = ui = (1/sqrt(ewi)) * A * evi ergaenzt zu ON-Basis des Rm
+    U = 1 / np.sqrt(ew) * np.matmul(A, ev)
     return U, Sigma, Vt
 
 def pseudo_inverse(A):
