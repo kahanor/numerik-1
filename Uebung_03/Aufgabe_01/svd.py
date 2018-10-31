@@ -34,9 +34,9 @@ def svd(A):
     return U, Sigma, Vt
 
 def pseudo_inverse(A):
-    A_ = la.inv(np.matmul(A.T, A))
-    A_pseu = np.matmul(A_, A.T)
-    return A_pseu
+    u, sig, v_adj = svd(A)
+    sig_pseu = 1 / sig
+    return np.matmul(v_adj.T, np.matmul(sig_pseu, U.T))
 
 def lin_solve(A,b):
     return np.matmul(pseudo_inverse(A), b)
